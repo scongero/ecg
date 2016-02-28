@@ -176,6 +176,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	overflow: auto;
+	min-width: 1000px
 }
 
 #team-border {
@@ -184,7 +185,7 @@ body {
     top: 10px;
     right: 10px;
     bottom: 10px;
-	height: 1226px;
+	height: 1228px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #01361d;
@@ -199,7 +200,6 @@ body {
 }
 
 #team-title-text {
-	width: 500px;
 	height: 70px;
 	margin-top: 50px;
 	margin-right: auto;
@@ -222,7 +222,7 @@ body {
 }
 
 .line-group {
-	width: 1000px;
+	width: 86%;
 	height: 1px;
 	margin-right: auto;
 	margin-left: auto;
@@ -232,18 +232,26 @@ body {
 
 #name-line {
 	float: left;
-	width: 160px;
-	margin-right: 170px;
-	margin-left: 170px;
+	width: 50%;
+	/*margin-right: 170px;
+	margin-left: 170px;*/
+	
+}
+
+.name-line-physical {
 	background-color: black;
 	opacity: 0.3;
+	width: 40%;
+	height: 1px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .member-group {
 	margin-right: auto;
 	margin-left: auto;
 	height: 180px;
-	width: 1000px;
+	width: 86%;
 }
 
 #members-div {
@@ -252,7 +260,7 @@ body {
 
 .member {
 	height: 180px;
-	width: 500px;
+	width: 50%;
 	float: left;
 }
 
