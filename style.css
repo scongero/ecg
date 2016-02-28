@@ -163,20 +163,25 @@ body {
 	border-color: #01361d;
 }
 
+#team-scrollable {
+	position: absolute;
+	top: 2000px;
+	bottom: 0px;
+	width: 100%;
+	overflow: auto;
+}
+
 #team-div {
 	background-color: white;
 	opacity: 0.96;
 	position: absolute;
-	top: 2000px;
-	bottom: 0px;
-	/*height: 630px;*/
 	width: 80%;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: auto;
-	min-width: 1000px
+	min-width: 900px;
+	height: 1240px;
 }
 
 #team-border {
@@ -185,7 +190,6 @@ body {
     top: 10px;
     right: 10px;
     bottom: 10px;
-	height: 1228px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #01361d;
