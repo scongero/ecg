@@ -34,7 +34,7 @@ body {
 #heading {
 	background-color: white;
 	position: absolute;
-    left: 20px;
+    left: 2vw;
     top: 20px;
 	height: 140px;
 	width: 1040px;
@@ -95,18 +95,16 @@ body {
 
 #address-div {
 	position: absolute;
-    left: 1060px;
-    top: 1540px;
-    height: 270px;
+	bottom: -1000px;
+	height: 270px;
+	right: 90px;
 	width: 300px;
 }
 
 #address {
 	position: absolute;
-    /*left: 1060px;
-    top: 540px;*/
-	height: 270px;
-	width: 300px;
+	height: 100%;
+	width: 100%;
 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#001b0e+0,01361d+100 */
 	background: #001b0e; /* Old browsers */
 	background: -moz-linear-gradient(top,  #01361d 0%, #001b0e 100%); /* FF3.6-15 */
@@ -120,32 +118,30 @@ body {
 	position: absolute;
     left: 10px;
     top: 10px;
-	height: 330px;
-	width: 280px;
+    right: 10px;
+    bottom: 0px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: white;
+	border-bottom: 0;
 }
 
 #motto-div {
 	position: absolute;
-	left: -1980px;
-    top: 580px;
+    bottom: 20px;
 	height: 200px;
-	width: 1380px;
+	left: -1980px;
+	width: 96vw;
 }
 
 #motto {
 	background-color: white;
 	position: absolute;
-    /*left: 24px;
-    top: 580px;*/
-	height: 200px;
-	width: 1380px;
+	height: 100%;
+	width: 100%;
 }
 
 #motto-text {
-	/*background-color: red;*/
 	position: absolute;
 	top: 12px;
 	left: 68px;
@@ -160,8 +156,8 @@ body {
 	position: absolute;
     left: 10px;
     top: 10px;
-	height: 180px;
-	width: 1360px;
+    bottom: 10px;
+    right: 10px;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #01361d;
@@ -171,8 +167,8 @@ body {
 	background-color: white;
 	opacity: 0.96;
 	position: absolute;
-	/*top: 180px;*/
 	top: 2000px;
+	/*top: 2000px;*/
 	left:50%;
 	height: 630px;
 	width: 1200px;
@@ -182,8 +178,8 @@ body {
 	position: absolute;
     left: 10px;
     top: 10px;
-	height: 1230px;
-	width: 1176px;
+    right: 10px;
+	height: 1212px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #01361d;

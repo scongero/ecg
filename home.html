@@ -148,7 +148,7 @@ var contactOn = false;
 $('#team-div').css({left: "-=" + $('#team-div').width()/2})
 
 $('#motto-div').animate({left: '+=2000'}, {duration: 1400, easing: 'easeOutQuart'});
-$('#address-div').animate({top: '-=1000'}, {duration: 1400, easing: 'easeOutQuart'});
+$('#address-div').animate({bottom: '+=1000'}, {duration: 1400, easing: 'easeOutQuart'});
 
 $('#links-line').css({'width': '50px'})
 
@@ -184,7 +184,7 @@ $('#logo-pic').click(function() {
 	switch(sourcePage) {
 		case 'home':
 			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
-  			$('#address-div').animate({top: '+=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-div').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
   			homeOn = false;
   			break;
   		case 'team':
@@ -204,15 +204,8 @@ $('#logo-pic').click(function() {
   			break;
 	}
 	$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
-  	$('#address-div').animate({top: '-=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+  	$('#address-div').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
   	homeOn = true;
-});
-
-$('.links' ).click(function() {
-  //$('.link-text', this).css("background-color", "white");
-  // $('#motto-div').animate({left: '-=2000'}, 1000);
-  // $('#address-div').animate({top: '+=1000'}, 1000);
-  //$('#team-div').animate({top: '-=1820'}, 1000);
 });
 
 $('.links').click(function() {
@@ -245,7 +238,7 @@ $('.links').click(function() {
 	switch(sourcePage) {
 		case 'home':
 			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
-  			$('#address-div').animate({top: '+=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-div').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
   			homeOn = false;
   			break;
   		case 'team':
@@ -268,7 +261,7 @@ $('.links').click(function() {
 	switch(targetPage) {
 		case 'home-link':
 			$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
-  			$('#address-div').animate({top: '-=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+  			$('#address-div').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
   			homeOn = true;
   			break;
   		case 'team-link':
