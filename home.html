@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="jquery.easing.1.3.js"></script>
+    <script src="jquery.animate-colors-min.js"></script>
+    <script src="script.js"></script>
+    <title>ECG</title>
+  </head>
+  <body>
+  	<div id="background">
+  		<img src='background.jpg' style='width:100%;height:100%' alt='[]' />
+	</div>
+
+	<div id="heading">
+		<div id="heading-border">
+		</div>
+		<div id="logo">
+			<img id="logo-pic" src='ecg-logo.png' style='width:100%;height:100%' alt='[]' />
+		</div>
+		<div id="ecg-title">
+			<img src='ecg-title.png' style='width:100%;height:100%' alt='[]' />
+		</div>
+		<div id="links-div">
+			<div class="links" id="home-link">
+				<span class="link-text">Home</span>
+			</div>
+			<div class="links" id="team-link">
+				<span class="link-text">The Team</span>
+			</div>
+			<div class="links" id="partners-link">
+				<span class="link-text">Partners</span>
+			</div>
+			<div class="links" id="news-link">
+				<span class="link-text">News</span>
+			</div>
+			<div class="links" id="contact-link">
+				<span class="link-text">Contact Us</span>
+			</div>
+			<div class="h-line" id="links-line"></div>
+		</div>
+	</div>
+
+	
+	<div id="motto-div">
+		<div id="motto">
+			<p id="motto-text">Emerald Creek Group, LLC is a Southern California based private equity firm focused on real estate with the primary objective of building an investment portfolio focused on sustainable value and long term growth.</p>
+		</div>
+
+		<div id="motto-border">
+		</div>
+	</div>
+
+	<div id="address-div">
+		<div id="address">
+			<p class="address-text"><span id="bold-office-name">Southern California Office</span><br>5000 Birch Street<br>Suite 500<br>Newport Beach, CA 92660<br>949.379.7200</p>
+		</div>
+		<div id="address-border">
+		</div>
+	</div>
+
+	
+	<div id='team-div'>
+		<div id='team-border'>
+		</div>
+		<p id="team-title-text">Meet The Team</span>
+		<div class="h-line" id="meet-line"></div>
+		<div id="members-div">
+			<div class="member-group">
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Larry Kellner</span><br>President<br>949.379.7207<br>larry.kellner@emeraldcreek.com</p>
+				</div>
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Gerard J. Arpey</span><br>Partner<br>713.468.4050<br>gerard.arpey@emeraldcreek.com</p>
+				</div>
+			</div>
+			<div class="line-group">
+				<div class="h-line" id="name-line"></div>
+				<div class="h-line" id="name-line"></div>
+			</div>
+			<div class="member-group">
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Jacques Lapointe</span><br>Partner<br>949.379.7210<br>jacques.lapointe@emeraldcreek.com</p>
+				</div>
+				<div class="member">
+					<p class="member-text"><span class="bold-name">John Garlington</span><br>Chief Financial Officer<br>949.379.7213<br>john.garlington@emeraldcreek.com</p>
+				</div>
+			</div>
+			<div class="line-group">
+				<div class="h-line" id="name-line"></div>
+				<div class="h-line" id="name-line"></div>
+			</div>
+			<div class="member-group">
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Terry Bissell</span><br>Senior Analyst<br>949.379.7212<br>terry.bissell@emeraldcreek.com</p>
+				</div>
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Ashley Marino</span><br>Executive Assistant<br>949.379.7201<br>ashley.marino@emeraldcreek.com</p>
+				</div>
+			</div>
+			<div class="line-group">
+				<div class="h-line" id="name-line"></div>
+				<div class="h-line" id="name-line"></div>
+			</div>
+			<div class="member-group">
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Jon Farrell</span><br>Analyst<br>949.379.7214<br>jon.farrell@emeraldcreek.com</p>
+				</div>
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Jack Kellner</span><br>Technology<br>949.379.7208<br>jack.kellner@emeraldcreek.com</p>
+				</div>
+			</div>
+			<div class="line-group">
+				<div class="h-line" id="name-line"></div>
+				<div class="h-line" id="name-line"></div>
+			</div>
+			<div class="member-group">
+				<div class="member">
+					<p class="member-text"><span class="bold-name">Sue Dabbs</span><br>Office Manager<br>949.379.7211<br>sue.dabbs@emeraldcreek.com</p>
+					<br>
+					<br>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+  </body>
+</html>
+<script>
+/*
+$('.links').bind('mouseenter', function (e) {
+  $('.link-text', this).css("background-color", "yellow");
+})
+.bind('mouseleave', function (e) {
+  $('.link-text', this).css("background-color", '');
+});
+*/
+
+var homeOn = true;
+var teamOn = false;
+var partnersOn = false;
+var newsOn = false;
+var contactOn = false;
+
+$('#team-div').css({left: "-=" + $('#team-div').width()/2})
+
+$('#motto-div').animate({left: '+=2000'}, {duration: 1400, easing: 'easeOutQuart'});
+$('#address-div').animate({top: '-=1000'}, {duration: 1400, easing: 'easeOutQuart'});
+
+$('#links-line').css({'width': '50px'})
+
+$('body').css({
+    'overflow': 'hidden',
+    'height': '100%'
+});
+
+$('#team-div').css({
+	'overflow': 'auto',
+	//'height': 'auto'
+});
+
+$('#logo-pic').click(function() {
+	var nextPos = 0 - $('#links-line').position().left;
+	$('#links-line').animate({width: $('.link-text', '#home-link').width(), left: '+=' + nextPos}, {duration: 1000, easing: 'easeOutQuint'});
+
+	var sourcePage;
+
+	if (homeOn) {
+		sourcePage = 'home';
+		return;
+	} else if (teamOn) {
+		sourcePage = 'team';
+	} else if (partnersOn) {
+		sourcePage = 'partners';
+	} else if (newsOn) {
+		sourcePage = 'news';
+	} else if (contactOn) {
+		sourcePage = 'contact';
+	}
+
+	switch(sourcePage) {
+		case 'home':
+			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-div').animate({top: '+=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			homeOn = false;
+  			break;
+  		case 'team':
+  			$('#team-div').animate({top: '+=1820'}, {duration: 1700, easing: 'easeOutQuint'});
+  			teamOn = false;
+  			break;
+  		case 'partners':
+  			partnersOn = false;
+  			break;
+  		case 'news':
+  			newsOn = false;
+  			break;
+  		case 'contact':
+  			contactOn = false;
+  			break;
+  		default:
+  			break;
+	}
+	$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
+  	$('#address-div').animate({top: '-=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+  	homeOn = true;
+});
+
+$('.links' ).click(function() {
+  //$('.link-text', this).css("background-color", "white");
+  // $('#motto-div').animate({left: '-=2000'}, 1000);
+  // $('#address-div').animate({top: '+=1000'}, 1000);
+  //$('#team-div').animate({top: '-=1820'}, 1000);
+});
+
+$('.links').click(function() {
+	var nextPos = $(this).position().left - $('#links-line').position().left;
+	$('#links-line').animate({width: $('.link-text', this).width(), left: '+=' + nextPos}, {duration: 1000, easing: 'easeOutQuint'});
+	// $('#links-line').animate({left: '+=105'}, 1000);
+});
+
+$('.links').click(function() {
+	var sourcePage;
+	var targetPage = $(this).attr('id');
+
+	if (homeOn) {
+		sourcePage = 'home';
+	} else if (teamOn) {
+		sourcePage = 'team';
+	} else if (partnersOn) {
+		sourcePage = 'partners';
+	} else if (newsOn) {
+		sourcePage = 'news';
+	} else if (contactOn) {
+		sourcePage = 'contact';
+	}
+
+	if (sourcePage.substr(0,1) == targetPage.substr(0,1)) {
+		return;
+	}
+
+
+	switch(sourcePage) {
+		case 'home':
+			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-div').animate({top: '+=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			homeOn = false;
+  			break;
+  		case 'team':
+  			$('#team-div').animate({top: '+=1820'}, {duration: 1700, easing: 'easeOutQuint'});
+  			teamOn = false;
+  			break;
+  		case 'partners':
+  			partnersOn = false;
+  			break;
+  		case 'news':
+  			newsOn = false;
+  			break;
+  		case 'contact':
+  			contactOn = false;
+  			break;
+  		default:
+  			break;
+	}
+
+	switch(targetPage) {
+		case 'home-link':
+			$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
+  			$('#address-div').animate({top: '-=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+  			homeOn = true;
+  			break;
+  		case 'team-link':
+  			$('#team-div').animate({top: '-=1820'}, {duration: 1400, easing: 'easeOutQuart'});
+  			teamOn = true;
+  			break;
+  		case 'partners-link':
+  			partnersOn = true;
+  			break;
+  		case 'news-link':
+  			newsOn = true;
+  			break;
+  		case 'contact-link':
+  			contactOn = true;
+  			break;
+  		default:
+  			break;
+	}
+	
+
+});
+
+</script>
