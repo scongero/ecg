@@ -168,10 +168,14 @@ body {
 	opacity: 0.96;
 	position: absolute;
 	top: 2000px;
-	/*top: 2000px;*/
-	left:50%;
-	height: 630px;
-	width: 1200px;
+	bottom: 0px;
+	/*height: 630px;*/
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
 }
 
 #team-border {
@@ -179,7 +183,8 @@ body {
     left: 10px;
     top: 10px;
     right: 10px;
-	height: 1212px;
+    bottom: 10px;
+	height: 1226px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #01361d;
