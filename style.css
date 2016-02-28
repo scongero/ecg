@@ -34,7 +34,7 @@ body {
 #heading {
 	background-color: white;
 	position: absolute;
-    left: 2vw;
+    left: 2%;
     top: 20px;
 	height: 140px;
 	width: 1040px;
@@ -93,12 +93,58 @@ body {
 	font-size: 22px;
 }
 
+#footer-div {
+	position: absolute;
+	left: 2%;
+	right: 2%;
+	bottom: 0px;
+	height: 270px;
+	min-width: 1190px;
+}
+
+#motto-div {
+	position: absolute;
+	background-color: white;
+    bottom: 20px;
+	height: 200px;
+	left: -2000px;
+	width: 100%;
+}
+
 #address-div {
+	position: absolute;
+	bottom: 0px;
+	height: 270px;
+	left: 0;
+	width: 300px;
+}
+
+#motto {
+	position: absolute;
+	bottom: 20px;
+	height: 200px;
+	width: 73%;
+	left: -2000px;
+}
+
+#motto-text {
+	position: absolute;
+	top: 12px;
+	left: 4%;
+	right: 4%;
+	height: 140px;
+	font-family: 'geoSans';
+	font-size: 30px;
+	text-align: center;
+}
+
+#address-container {
 	position: absolute;
 	bottom: -1000px;
 	height: 270px;
-	right: 90px;
-	width: 300px;
+	width: 25%;
+	right: 2%;
+	min-width: 300px;
 }
 
 #address {
@@ -124,32 +170,6 @@ body {
 	border-width: 1px;
 	border-color: white;
 	border-bottom: 0;
-}
-
-#motto-div {
-	position: absolute;
-    bottom: 20px;
-	height: 200px;
-	left: -1980px;
-	width: 96vw;
-}
-
-#motto {
-	background-color: white;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
-
-#motto-text {
-	position: absolute;
-	top: 12px;
-	left: 68px;
-	width: 900px;
-	height: 140px;
-	font-family: 'geoSans';
-	font-size: 30px;
-	text-align: center;
 }
 
 #motto-border {
@@ -237,9 +257,6 @@ body {
 #name-line {
 	float: left;
 	width: 50%;
-	/*margin-right: 170px;
-	margin-left: 170px;*/
-	
 }
 
 .name-line-physical {

@@ -43,22 +43,29 @@
 		</div>
 	</div>
 
-	
-	<div id="motto-div">
+	<!-- <div id = "footer-div"> -->
+	<!-- </div> -->
+	<div id = "footer-div">
+		<div id="motto-div">
+			<div id="motto-border">
+			</div>
+		</div>
+
 		<div id="motto">
-			<p id="motto-text">Emerald Creek Group, LLC is a Southern California based private equity firm focused on real estate with the primary objective of building an investment portfolio focused on sustainable value and long term growth.</p>
+				<p id="motto-text">Emerald Creek Group, LLC is a Southern California based private equity firm focused on real estate with the primary objective of building an investment portfolio focused on sustainable value and long term growth.</p>
 		</div>
 
-		<div id="motto-border">
+		<div id="address-container">
+			<div id="address-div">
+				<div id="address">
+					<p class="address-text"><span id="bold-office-name">Southern California Office</span><br>5000 Birch Street<br>Suite 500<br>Newport Beach, CA 92660<br>949.379.7200</p>
+				</div>
+				<div id="address-border">
+				</div>
+			</div>	
 		</div>
-	</div>
 
-	<div id="address-div">
-		<div id="address">
-			<p class="address-text"><span id="bold-office-name">Southern California Office</span><br>5000 Birch Street<br>Suite 500<br>Newport Beach, CA 92660<br>949.379.7200</p>
-		</div>
-		<div id="address-border">
-		</div>
+		
 	</div>
 
 	<div id='team-scrollable'>
@@ -165,7 +172,8 @@ var contactOn = false;
 
 
 $('#motto-div').animate({left: '+=2000'}, {duration: 1400, easing: 'easeOutQuart'});
-$('#address-div').animate({bottom: '+=1000'}, {duration: 1400, easing: 'easeOutQuart'});
+$('#motto').animate({left: '+=2000'}, {duration: 1400, easing: 'easeOutQuart'});
+$('#address-container').animate({bottom: '+=1000'}, {duration: 1400, easing: 'easeOutQuart'});
 
 $('#links-line').css({'width': '50px'})
 
@@ -196,7 +204,8 @@ $('#logo-pic').click(function() {
 	switch(sourcePage) {
 		case 'home':
 			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
-  			$('#address-div').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+			$('#motto').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-container').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
   			homeOn = false;
   			break;
   		case 'team':
@@ -216,7 +225,8 @@ $('#logo-pic').click(function() {
   			break;
 	}
 	$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
-  	$('#address-div').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+	$('#motto').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
+  	$('#address-container').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
   	homeOn = true;
 });
 
@@ -250,7 +260,8 @@ $('.links').click(function() {
 	switch(sourcePage) {
 		case 'home':
 			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
-  			$('#address-div').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+			$('#motto').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-container').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
   			homeOn = false;
   			break;
   		case 'team':
@@ -273,7 +284,8 @@ $('.links').click(function() {
 	switch(targetPage) {
 		case 'home-link':
 			$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
-  			$('#address-div').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+			$('#motto').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
+  			$('#address-container').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
   			homeOn = true;
   			break;
   		case 'team-link':
