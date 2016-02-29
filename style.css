@@ -31,6 +31,12 @@ body {
 	height:100%;
 }
 
+/*
+
+Begin Header Styling
+
+*/
+
 #heading {
 	background-color: white;
 	position: absolute;
@@ -46,6 +52,7 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001b0e', endColorstr='#01361d',GradientType=0 ); /* IE6-9 */
 
 }
+
 
 #heading-border {
 	position: absolute;
@@ -92,6 +99,12 @@ body {
 	font-family: 'geoSans';
 	font-size: 22px;
 }
+
+/*
+
+BEGIN FOOTER STYLING
+
+*/
 
 #footer-div {
 	position: absolute;
