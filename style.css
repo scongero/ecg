@@ -421,27 +421,32 @@ body {
 }
 
 .one-news-text {
+	text-align: center;
+	/*background-color: purple;*/
 	font-family: 'geoSans';
 	font-size: 20px;
 	height: 100%;
 	text-align: left;
 	margin-left: 60px;
-	margin-top: 22px;
+	/*margin-top: 22px;*/
 	width:410px;
 
 }
 
 .two-news-text {
+	/*text-align: center;*/
 	font-family: 'geoSans';
 	font-size: 20px;
 	height: 100%;
 	text-align: left;
 	margin-left: 60px;
-	margin-bottom: 25px;
+	/*margin-bottom: 25px;*/
 	width:410px;
+	z-index: 20;
 }
 
 .article-name {
 	font-size: 24px;
 	font-weight: 600;
+	z-index: 20;
 }
