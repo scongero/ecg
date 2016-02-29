@@ -33,7 +33,7 @@ body {
 
 /*
 
-Begin Header Styling
+*************************************** Begin Header Styling ***************************************
 
 */
 
@@ -102,7 +102,7 @@ Begin Header Styling
 
 /*
 
-BEGIN FOOTER STYLING
+*************************************** Begin Footer Styling ***************************************
 
 */
 
@@ -195,6 +195,12 @@ BEGIN FOOTER STYLING
 	border-width: 1px;
 	border-color: #01361d;
 }
+
+/*
+
+*************************************** Begin Team Styling ***************************************
+
+*/
 
 #team-scrollable {
 	position: absolute;
@@ -303,6 +309,159 @@ BEGIN FOOTER STYLING
 	font-size: 24px;
 	text-align: center;
 }
+
+/*
+
+*************************************** Begin News Styling ***************************************
+
+*/
+
+#news-scrollable {
+	position: absolute;
+	top: 2000px;
+	bottom: 0px;
+	width: 100%;
+	overflow: auto;
+}
+
+#news-div {
+	background-color: white;
+	opacity: 0.96;
+	position: absolute;
+	width: 80%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 900px;
+	height: 1240px;
+}
+
+#news-border {
+	position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01361d;
+}
+
+#news-title {
+	display: block;
+	width: 500px;
+	height: 70px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#news-title-text {
+	height: 70px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: 'chamLimo';
+	font-size: 60px;
+	text-align: center;
+}
+
+.h-line {
+	height: 1px;
+}
+
+#news-line {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -50px;
+	width: 300px;
+	background-color: black;
+}
+
+.line-group {
+	width: 86%;
+	height: 1px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+#name-line {
+	float: left;
+	width: 50%;
+}
+
+.news-line-physical {
+	background-color: black;
+	opacity: 0.3;
+	width: 60%;
+	height: 1px;
+	left:0px;
+}
+
+#news-separator {
+	margin-left: 15%;
+	width: 60%;
+}
+
+.news-group {
+	margin-right: auto;
+	margin-left: auto;
+	height: 180px;
+	width: 70%;
+	background-color: blue;
+}
+
+.two-news-group {
+	margin-right: auto;
+	margin-left: auto;
+	height: 250px;
+	width: 70%;
+	background-color: red;
+}
+
+.news-logo {
+	width: 35%;
+	float: left;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.two-news-logo {
+	width: 35%;
+	float: left;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#news-div {
+	margin-top: 30px;
+}
+
+.news {
+	height: 180px;
+	width: 50%;
+	float: left;
+}
+
+.news-text-div {
+	right:0px;
+	float: right;
+	width: 35%;
+}
+
+#two-article {
+	float: left;
+	width: 35%;
+}
+
+.news-text {
+	font-family: 'geoSans';
+	font-size: 24px;
+	text-align: center;
+}
+
 
 .bold-name {
 	font-size: 32px;

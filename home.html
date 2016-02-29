@@ -152,6 +152,70 @@
 		</div>
 	</div>
 
+	<div id='news-scrollable'>
+		<div id='news-div'>
+			<div id='news-border'>
+			</div>
+			<p id="news-title-text">News</p>
+			<div class="h-line" id="news-line"></div>
+			<div class="news-group">
+				<div class="news-logo">
+					<img id="ecg-news-pic" src='ecg-news-logo.png' style='width:100%;height:100%' alt='[]' />
+				</div>
+				<div class="news-text-div">
+					<p class="bold-news">Arpey Joins Emerald Creek Group</p>
+					<p class="news-date">November 29, 2011</p>
+				</div>
+				<span class="stretch"></span>
+			</div>
+			<div class="h-line" id="news-separator">
+				<div class="news-line-physical"></div>
+			</div>
+			<div class="two-news-group">
+				<div class="two-news-logo">
+					<img id="chron-news-pic" src='chron-news-logo.png' style='width:100%;height:100%' alt='[]' />
+				</div>
+				<div id="two-article">
+					<p class="bold-news">Chairman Spells Out His Priorities</p>
+					<p class="news-date">January 12,2011</p>
+					<br>
+					<p class="bold-news">Kellner Turns His Focus</p>
+					<p class="news-date">January 1, 2011</p>
+				</div>
+				<span class="stretch"></span>
+			</div>
+			<div class="h-line" id="news-separator">
+				<div class="news-line-physical"></div>
+			</div>
+			<div class="news-group">
+				<div class="news-logo">
+					<img id="hbj-news-pic" src='hbj-news-logo.png' style='width:100%;height:100%' alt='[]' />
+				</div>
+				<div class="news-text-div">
+					<p class="bold-news">Kellner Jumps Back Into Real Estate</p>
+					<p class="news-date">March 19, 2010</p>
+				</div>
+				<span class="stretch"></span>
+			</div>
+			<div class="h-line" id="news-separator">
+				<div class="news-line-physical"></div>
+			</div>
+			<div class="news-group">
+				<div class="news-logo">
+					<img id="la-news-pic" src='la-news-logo.png' style='width:100%;height:100%' alt='[]' />
+				</div>
+				<div class="news-text-div">
+					<p class="bold-news">Farmland Safer Than Stocks</p>
+					<p class="news-date">September 20, 2010</p>
+				</div>
+				<span class="stretch"></span>
+			</div>
+			<div class="h-line" id="news-separator">
+				<div class="news-line-physical"></div>
+			</div>
+		</div>
+	</div>
+
   </body>
 </html>
 <script>
@@ -216,6 +280,7 @@ $('#logo-pic').click(function() {
   			partnersOn = false;
   			break;
   		case 'news':
+  			$('#news-scrollable').animate({top: '+=1850'}, {duration: 1700, easing: 'easeOutQuint'});
   			newsOn = false;
   			break;
   		case 'contact':
@@ -272,6 +337,7 @@ $('.links').click(function() {
   			partnersOn = false;
   			break;
   		case 'news':
+  			$('#news-scrollable').animate({top: '+=1850'}, {duration: 1700, easing: 'easeOutQuint'});
   			newsOn = false;
   			break;
   		case 'contact':
@@ -296,6 +362,7 @@ $('.links').click(function() {
   			partnersOn = true;
   			break;
   		case 'news-link':
+  			$('#news-scrollable').animate({top: '-=1850'}, {duration: 1400, easing: 'easeOutQuart'});
   			newsOn = true;
   			break;
   		case 'contact-link':
