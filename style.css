@@ -127,15 +127,17 @@ body {
 	left: -2000px;
 }
 
-#motto-text {
-	position: absolute;
-	top: 12px;
-	left: 4%;
-	right: 4%;
-	height: 140px;
+.motto-text {
 	font-family: 'geoSans';
 	font-size: 30px;
 	text-align: center;
+}
+
+#motto-text-container{
+	position: absolute;
+	left: 4%;
+	right: 4%;
+	height: 100%;
 }
 
 #address-container {
