@@ -260,8 +260,25 @@
 
 <!-- BEGIN LARRY BIO DIV -->
 	<div id="larry-bio-div">
-		<div id="larry-bio-div-border">
+		<div class="bio-div-border">
 
+			<div class="bio-left-column">
+				<div class="bio-pic-container">
+					<img src='larry-bio-pic.png' style='width:100%;opacity:1;' alt='[]' />
+				</div>
+
+				<div class="bio-name-title">
+					<span class="bio-name">Larry Kellner</span><br>President
+				</div>
+			</div>
+
+			<div class="bio-right-column" id="larry-bio-text-size">
+				<span>Larry Kellner is president of Emerald Creek Group, a private equity firm based in Southern California.</span>
+				<span>From December 2004 through December 2009, Kellner was the chairman and chief executive officer of Continental Airlines.  Kellner joined the airline in 1995 as chief financial officer.  In May 2001, he was elected president of the airline and to the Board of Directors, and in March 2003, he was named president and chief operating officer.</span>
+				<span>Prior to joining Continental, Kellner was executive vice president and chief financial officer of American Savings Bank, owned by The Robert M. Bass Group. Prior to that, he was executive vice president and chief financial officer of The Koll Company, a private real estate investment and construction firm.  He started his career at Ernst & Whinney (now Ernst & Young).</span>
+				<span>Kellner graduated magna cum laude with a bachelor of science in business administration from the University of South Carolina, where he served as Student Body President.  In addition, the University of South Carolina presented him with the Distinguished Alumni Award in 1998.</span>
+				<span>Kellner serves as non-executive Chairman of the Board of Directors of the Sabre Corporation and serves on the board of directors for The Boeing Company, Marriott International and The Chubb Corporation.  He is active in several community and civic organizations.</span>
+			</div>
 		</div>
 	</div>
 <!-- END LARRY BIO DIV -->
@@ -270,8 +287,27 @@
 
 <!-- BEGIN GERARD BIO DIV -->
 	<div id="gerard-bio-div">
-		<div id="gerard-bio-div-border">
+		<div class="bio-div-border">
 
+			<div class="bio-left-column">
+				<div class="bio-pic-container">
+					<img src='gerard-bio-pic.png' style='width:100%;opacity:1;' alt='[]' />
+				</div>
+
+				<div class="bio-name-title">
+					<span class="bio-name">Gerard Arpey</span><br>Partner
+				</div>
+			</div>
+
+			<div class="bio-right-column" id="gerard-bio-text-size">
+				<span>Gerard J. Arpey is a partner in Emerald Creek Group, LLC, a private equity firm based in Southern California.</span>
+				<span>Prior to his retirement in November 2011, Gerard Arpey served as Chief Executive Officer of AMR Corporation and American Airlines from April 2003 through November 2011.  From May 2004 through November 2011, he was also Chairman of the AMR Board of Directors.  Mr. Arpey led American Airlines -- one of the world’s largest carriers, serving 250 cities in 40 countries -- through the most tumultuous period in the history of the airline industry.</span>
+				<span>Mr. Arpey previously served as American’s President and Chief Operating Officer, Senior Vice President of Finance and Planning, and Chief Financial Officer.  He joined the company in 1982 as a financial analyst, and was named a corporate officer in 1989.</span>
+				<span>Mr. Arpey earned a Bachelor of Business Administration degree in 1980 and an MBA in 1982, both from the University of Texas at Austin.</span>
+				<span>An avid pilot, Mr. Arpey holds a FAA Multi-Engine Instrument Pilot Rating.</span>
+				<span>Mr. Arpey serves on the Board of Directors of S. C. Johnson & Son, Inc. (A Family Company). He is a trustee of the American Beacon Funds and also a member of The Business Council.  He and his wife Lisa are involved in a variety of civic and charitable organizations.</span>
+				<span>Lisa and Gerard Arpey reside in Colleyville, Texas with their three children.</span>
+			</div>
 		</div>
 	</div>
 <!-- END GERARD BIO DIV -->
@@ -456,14 +492,14 @@ $('.links').click(function() {
 
 	if (sourcePage.substr(0,1) == targetPage.substr(0,1)) {
 		if(teamBioFlagLarry == true){
-			$('#team-scrollable').animate({top: '-=520'}, {duration: 1700, easing: 'easeOutQuint'});
-			$('#larry-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+			$('#team-scrollable').animate({top: '-=520'}, {duration: 1000, easing: 'easeOutQuint'});
+			$('#larry-bio-div').animate({top: '-=730'}, {duration: 1400, easing: 'easeOutQuint'});
 			teamBioFlagLarry = false;
 		}
 
 		if(teamBioFlagGerard == true){
-			$('#team-scrollable').animate({top: '-=520'}, {duration: 1700, easing: 'easeOutQuint'});
-			$('#gerard-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+			$('#team-scrollable').animate({top: '-=520'}, {duration: 1000, easing: 'easeOutQuint'});
+			$('#gerard-bio-div').animate({top: '-=730'}, {duration: 1400, easing: 'easeOutQuint'});
 			teamBioFlagGerard = false;
 		}
 		return;

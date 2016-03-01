@@ -466,14 +466,14 @@ a:link, a:visited {
 
 
 /*
-******************************* Begin Larry Bio Style Definitions *******************************
+******************************* Begin Bio Style Definitions *******************************
 */
 #larry-bio-div {
 	position: absolute;
 	background-color: white;
 	opacity: 0.96;
 	position: absolute;
-	width: 70%;
+	width: 1050px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -482,7 +482,7 @@ a:link, a:visited {
 	height: 510px;
 }
 
-#larry-bio-div-border{
+.bio-div-border{
 	position: absolute;
     left: 10px;
     top: 10px;
@@ -493,17 +493,88 @@ a:link, a:visited {
 	border-color: #01361d;
 }
 
+.bio-left-column{
+	float: left;
+	width: 300px;
+	height: 100%;
+	/*background-color: blue;*/
+}
 
+.bio-pic-container {
+	width: 256px;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: purple;*/
+	/*height: 260px;*/
+	text-align: center;
+}
+
+.bio-name-title {
+	width: 256px;
+	margin-top: 22px;
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: yellow;*/
+	height: 100px;
+	font-family: 'geoSans';
+	font-size: 24px;
+	text-align: right;
+}
+
+.bio-right-column{
+	float:right;
+	width: 718px;
+	margin-right: 10px;
+	margin-top:10px;
+	height: 100%;
+	/*background-color: red;*/
+	text-align: left;
+	font-family: 'geoSans';
+	display: table;
+	table-layout: fixed;
+}
+
+.bio-right-column span {
+    display: table-row;
+    text-align: left;
+}
+
+.bio-name {
+	font-size: 32px;
+	font-weight: 900;
+}
 
 /*
-******************************* Begin Gerard Bio Style Definitions *******************************
+******************************* Begin Larry-Specific Bio ID Definitions *******************************
+*/
+#larry-bio-div {
+	position: absolute;
+	background-color: white;
+	opacity: 0.96;
+	position: absolute;
+	width: 1050px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: -560px;
+	height: 510px;
+}
+
+#larry-bio-text-size {
+	font-size: 19px;
+}
+
+/*
+******************************* Begin Gerard-Specific Bio ID Definitions *******************************
 */
 #gerard-bio-div {
 	position: absolute;
 	background-color: white;
 	opacity: 0.96;
 	position: absolute;
-	width: 70%;
+	width: 1050px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -512,13 +583,6 @@ a:link, a:visited {
 	height: 510px;
 }
 
-#gerard-bio-div-border{
-	position: absolute;
-    left: 10px;
-    top: 10px;
-	bottom: 10px;
-	right: 10px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #01361d;
+#gerard-bio-text-size{
+	font-size: 18px;
 }
