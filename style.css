@@ -203,7 +203,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 900px;
-	height: 1240px;
+	height: 1210px;
 }
 
 #team-border {
@@ -252,8 +252,8 @@ body {
 	height: 1px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
 #name-line {
@@ -293,7 +293,7 @@ body {
 	text-align: center;
 }
 
-.bold-name {
+.employee-name {
 	font-size: 32px;
 	font-weight: 900;
 }
@@ -345,7 +345,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 900px;
-	height: 950px;
+	height: 920px;
 }
 
 #news-border {
@@ -375,7 +375,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	width: 750px;
-	height: 195px;
+	height: 160px;
 	/*background-color: red;*/
 }
 
@@ -451,4 +451,74 @@ body {
 	font-size: 24px;
 	font-weight: 600;
 	z-index: 20;
+}
+
+
+
+/*
+******************************* Begin Link Style Definitions *******************************
+*/
+a:link, a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+
+
+/*
+******************************* Begin Larry Bio Style Definitions *******************************
+*/
+#larry-bio-div {
+	position: absolute;
+	background-color: white;
+	opacity: 0.96;
+	position: absolute;
+	width: 70%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: -500px;
+	height: 500px;
+}
+
+#larry-bio-div-border{
+	position: absolute;
+    left: 10px;
+    top: 10px;
+	bottom: 10px;
+	right: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #01361d;
+}
+
+
+
+/*
+******************************* Begin Gerard Bio Style Definitions *******************************
+*/
+#gerard-bio-div {
+	position: absolute;
+	background-color: white;
+	opacity: 0.96;
+	position: absolute;
+	width: 70%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	top: -500px;
+	height: 500px;
+}
+
+#gerard-bio-div-border{
+	position: absolute;
+    left: 10px;
+    top: 10px;
+	bottom: 10px;
+	right: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #01361d;
 }
