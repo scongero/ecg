@@ -14,15 +14,42 @@
   		<img src='background.jpg' style='width:100%;height:100%' alt='[]' />
 	</div>
 
+<!-- BEGIN FOOTER DIV -->
+	<div id = "footer-div">
+		<div id="motto-div">
+			<div id="motto-border">
+			</div>
+		</div>
 
+		<div id="motto">
+			<div id="motto-text-container">
+				<div class="vertical-align">
+					<div class="motto-text">Emerald Creek Group, LLC is a Southern California based private equity firm focused on real estate with the primary objective of building an investment portfolio focused on sustainable value and long term growth.</div>
+				</div>
+			</div>
+				<!-- <p id="motto-text">Emerald Creek Group, LLC is a Southern California based private equity firm focused on real estate with the primary objective of building an investment portfolio focused on sustainable value and long term growth.</p> -->
+		</div>
+
+		<div id="address-container">
+			<div id="address-div">
+				<div id="address">
+					<p class="address-text"><span id="bold-office-name">Southern California Office</span><br>5000 Birch Street<br>Suite 500<br>Newport Beach, CA 92660<br>949.379.7200</p>
+				</div>
+				<div id="address-border">
+				</div>
+			</div>	
+		</div>	
+	</div>
+<!-- END FOOTER DIV -->
 
 <!-- BEGIN TEAM SCROLLABLE DIV -->
 	<div id='team-scrollable'>
 		<div id='team-div'>
-			<div id='team-border'>
-			</div>
 			<p id="team-title-text">Meet The Team</span>
 			<div class="h-line" id="meet-line"></div>
+
+			<div id='team-border'>
+			</div>
 
 			<div id="members-div">
 				<div class="member-group">
@@ -291,7 +318,9 @@
 
 			<div class="bio-left-column">
 				<div class="bio-pic-container">
-					<img src='gerard-bio-pic.png' style='width:100%;opacity:1;' alt='[]' />
+					<!-- <div class="bio-pic-border"> -->
+						<img src='gerard-bio-pic.png' style='width:100%;opacity:1;' alt='[]' />
+					<!-- </div> -->
 				</div>
 
 				<div class="bio-name-title">
@@ -345,33 +374,7 @@
 	</div>
 <!-- END HEADER DIV -->
 
-<!-- BEGIN FOOTER DIV -->
-	<div id = "footer-div">
-		<div id="motto-div">
-			<div id="motto-border">
-			</div>
-		</div>
 
-		<div id="motto">
-			<div id="motto-text-container">
-				<div class="vertical-align">
-					<div class="motto-text">Emerald Creek Group, LLC is a Southern California based private equity firm focused on real estate with the primary objective of building an investment portfolio focused on sustainable value and long term growth.</div>
-				</div>
-			</div>
-				<!-- <p id="motto-text">Emerald Creek Group, LLC is a Southern California based private equity firm focused on real estate with the primary objective of building an investment portfolio focused on sustainable value and long term growth.</p> -->
-		</div>
-
-		<div id="address-container">
-			<div id="address-div">
-				<div id="address">
-					<p class="address-text"><span id="bold-office-name">Southern California Office</span><br>5000 Birch Street<br>Suite 500<br>Newport Beach, CA 92660<br>949.379.7200</p>
-				</div>
-				<div id="address-border">
-				</div>
-			</div>	
-		</div>	
-	</div>
-<!-- END FOOTER DIV -->
 
   </body>
 </html>
@@ -571,17 +574,24 @@ $('.links').click(function() {
 	}
 });
 
+
 $('.employee-name').click(function(){
 	var targetBio = $(this).attr('id');
 
 
 	switch(targetBio) {
 		case 'larry':
+			if(teamBioFlagLarry == true){
+				break;
+			}
 			$('#team-scrollable').animate({top: '+=520'}, {duration: 1700, easing: 'easeOutQuint'});
 			$('#larry-bio-div').animate({top: '+=730'}, {duration: 1700, easing: 'easeOutQuint'});
 			teamBioFlagLarry = true;
 			break;
 		case 'gerard':
+			if(teamBioFlagGerard == true){
+				break;
+			}
 			$('#team-scrollable').animate({top: '+=520'}, {duration: 1700, easing: 'easeOutQuint'});
 			$('#gerard-bio-div').animate({top: '+=730'}, {duration: 1700, easing: 'easeOutQuint'});
 			teamBioFlagGerard = true;
@@ -589,8 +599,21 @@ $('.employee-name').click(function(){
 		default:
 			break;
 	}
-	
+});
 
+
+$('#team-border').click(function(){
+	if(teamBioFlagGerard == true){
+		$('#team-scrollable').animate({top: '-=520'}, {duration: 1700, easing: 'easeOutQuint'});
+		$('#gerard-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+		teamBioFlagGerard = false;
+	}
+
+	if(teamBioFlagLarry == true){
+		$('#team-scrollable').animate({top: '-=520'}, {duration: 1700, easing: 'easeOutQuint'});
+		$('#larry-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+		teamBioFlagLarry = false;
+	}
 });
 
 </script>
