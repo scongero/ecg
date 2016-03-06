@@ -286,7 +286,7 @@
 
 
 <!-- BEGIN LARRY BIO DIV -->
-	<div id="larry-bio-div">
+	<div class="bio-div" id="larry-bio-div">
 		<div class="bio-div-border">
 
 			<div class="bio-left-column">
@@ -313,7 +313,7 @@
 
 
 <!-- BEGIN GERARD BIO DIV -->
-	<div id="gerard-bio-div">
+	<div class="bio-div" id="gerard-bio-div">
 		<div class="bio-div-border">
 
 			<div class="bio-left-column">
@@ -346,32 +346,60 @@
 <!-- Begin Header Div -->
 	<div id="heading">
 		<div id="heading-border">
-		</div>
-		<div id="logo">
-			<img id="logo-pic" src='ecg-logo.png' style='width:100%;height:100%' alt='[]' />
-		</div>
-		<div id="ecg-title">
-			<img src='ecg-title.png' style='width:100%;height:100%' alt='[]' />
-		</div>
-		<div id="links-div">
-			<div class="links" id="home-link">
-				<span class="link-text">Home</span>
+
+			<div id="logo">
+				<!-- <div class="vertical-align"> -->
+					<div id="pic-container">
+						<img id="logo-pic" src='ecg-logo.png' style='width:100%;height:100%'alt='[]' />
+					</div>
+				<!-- </div> -->
+				
+				
 			</div>
-			<div class="links" id="team-link">
-				<span class="link-text">The Team</span>
+
+			<div id="heading-text">
+
+				<div id="ecg-title">
+					<img src='ecg-title.png' style='width:100%;height:100%' alt='[]' />
+				</div>
+
+				<div id="links-div">
+					<!-- <div class="vertical-align">
+						<span><div class="link-text" id="home-link">Home</div></span>
+						<span><div class="link-text" id="-link">The Team</div></span>
+						<span><div class="link-text" id="partners-link">Partners</div></span>
+						<span><div class="link-text" id="news-link">News</div></span>
+						<span><div class="link-text" id="contact-link">Contact Us</div></span>
+					</div> -->
+
+
+					<div class="links" id="home-link">
+						<span class="link-text">Home</span>
+					</div>
+					<div class="links" id="team-link">
+						<span class="link-text">The Team</span>
+					</div>
+					<div class="links" id="partners-link">
+						<span class="link-text">Partners</span>
+					</div>
+					<div class="links" id="news-link">
+						<span class="link-text">News</span>
+					</div>
+					<div class="links" id="contact-link">
+						<span class="link-text">Contact Us</span>
+					</div>
+					<div class="h-line" id="links-line"></div>
+
+				</div>
+
+				
+
 			</div>
-			<div class="links" id="partners-link">
-				<span class="link-text">Partners</span>
-			</div>
-			<div class="links" id="news-link">
-				<span class="link-text">News</span>
-			</div>
-			<div class="links" id="contact-link">
-				<span class="link-text">Contact Us</span>
-			</div>
-			<div class="h-line" id="links-line"></div>
+
 		</div>
 	</div>
+		
+		
 <!-- END HEADER DIV -->
 
 
@@ -408,6 +436,121 @@ $('body').css({
     'height': '100%'
 });
 
+
+
+$('.links').click(function() {
+	var nextPos = $(this).position().left - $('#links-line').position().left;
+	$('#links-line').animate({width: $('.link-text', this).width(), left: '+=' + nextPos}, {duration: 1000, easing: 'easeOutQuint'});
+	// $('#links-line').animate({left: '+=105'}, 1000);
+});
+
+$('.links').click(function() {
+	var sourcePage;
+	var targetPage = $(this).attr('id');
+
+	if (homeOn) {
+		sourcePage = 'home';
+	} else if (teamOn) {
+		sourcePage = 'team';
+	} else if (partnersOn) {
+		sourcePage = 'partners';
+	} else if (newsOn) {
+		sourcePage = 'news';
+	} else if (contactOn) {
+		sourcePage = 'contact';
+	}
+
+	if (sourcePage.substr(0,1) == targetPage.substr(0,1)) {
+		if(teamBioFlagLarry == true){
+			$('#team-scrollable').animate({top: '-=520'}, {duration: 1000, easing: 'easeOutQuint'});
+			$('#larry-bio-div').animate({top: '-=670'}, {duration: 1400, easing: 'easeOutQuint'});
+			teamBioFlagLarry = false;
+		}
+
+		if(teamBioFlagGerard == true){
+			$('#team-scrollable').animate({top: '-=520'}, {duration: 1000, easing: 'easeOutQuint'});
+			$('#gerard-bio-div').animate({top: '-=670'}, {duration: 1400, easing: 'easeOutQuint'});
+			teamBioFlagGerard = false;
+		}
+		return;
+	}
+
+
+	switch(sourcePage) {
+		case 'home':
+			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
+			$('#motto').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-container').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#ecg-title').animate({top: '-=200'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#heading').animate({height: '-=62'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#logo').animate({width: '-=8%'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#heading-text').animate({width: '+=8%'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#pic-container').animate({width: '-=20.16%'}, {duration: 1700, easing: 'easeOutQuint'});
+  			homeOn = false;
+  			break;
+  		case 'team':
+  			if(teamBioFlagLarry == true){
+  				$('#team-scrollable').animate({top: '+=1360'}, {duration: 1700, easing: 'easeOutQuint'});
+				$('#larry-bio-div').animate({top: '-=670'}, {duration: 1700, easing: 'easeOutQuint'});
+  				teamBioFlagLarry = false;
+  				teamOn = false;
+  				break;
+  			} else if (teamBioFlagGerard == true){
+  				$('#team-scrollable').animate({top: '+=1360'}, {duration: 1700, easing: 'easeOutQuint'});
+  				$('#gerard-bio-div').animate({top: '-=670'}, {duration: 1700, easing: 'easeOutQuint'});
+  				teamBioFlagGerard = false;
+  				teamOn = false;
+  				break;
+  			} else {
+  				$('#team-scrollable').animate({top: '+=1880'}, {duration: 1700, easing: 'easeOutQuint'});
+  				teamOn = false;
+  				break;
+  			}
+  		case 'partners':
+  			partnersOn = false;
+  			break;
+  		case 'news':
+  			newsOn = false;
+  			$('#news-scrollable').animate({top: '+=1880'}, {duration: 1700, easing: 'easeOutQuint'});
+  			break;
+  		case 'contact':
+  			contactOn = false;
+  			break;
+  		default:
+  			break;
+	}
+
+	switch(targetPage) {
+		case 'home-link':
+			$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
+			$('#motto').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
+  			$('#address-container').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+  			$('#ecg-title').animate({top: '+=200'}, {duration: 1300, easing: 'easeOutQuint'});
+  			$('#heading').animate({height: '+=62'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#logo').animate({width: '+=8%'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#heading-text').animate({width: '-=8%'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#pic-container').animate({width: '+=20.16%'}, {duration: 1700, easing: 'easeOutQuint'});
+  			homeOn = true;
+  			break;
+  		case 'team-link':
+  			$('#team-scrollable').animate({top: '-=1880'}, {duration: 1400, easing: 'easeOutQuart'});
+  			teamOn = true;
+  			break;
+  		case 'partners-link':
+  			partnersOn = true;
+  			break;
+  		case 'news-link':
+  			newsOn = true;
+  			$('#news-scrollable').animate({top: '-=1880'}, {duration: 1400, easing: 'easeOutQuart'});
+  			break;
+  		case 'contact-link':
+  			contactOn = true;
+  			break;
+  		default:
+  			break;
+	}
+});
+
 $('#logo-pic').click(function() {
 	var nextPos = 0 - $('#links-line').position().left;
 	$('#links-line').animate({width: $('.link-text', '#home-link').width(), left: '+=' + nextPos}, {duration: 1000, easing: 'easeOutQuint'});
@@ -436,19 +579,19 @@ $('#logo-pic').click(function() {
   			break;
   		case 'team':
   			if(teamBioFlagLarry == true){
-  				$('#team-scrollable').animate({top: '+=1300'}, {duration: 1700, easing: 'easeOutQuint'});
-				$('#larry-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+  				$('#team-scrollable').animate({top: '+=1360'}, {duration: 1700, easing: 'easeOutQuint'});
+				$('#larry-bio-div').animate({top: '-=670'}, {duration: 1700, easing: 'easeOutQuint'});
   				teamBioFlagLarry = false;
   				teamOn = false;
   				break;
   			} else if (teamBioFlagGerard == true){
-  				$('#team-scrollable').animate({top: '+=1300'}, {duration: 1700, easing: 'easeOutQuint'});
-  				$('#gerard-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+  				$('#team-scrollable').animate({top: '+=1360'}, {duration: 1700, easing: 'easeOutQuint'});
+  				$('#gerard-bio-div').animate({top: '-=670'}, {duration: 1700, easing: 'easeOutQuint'});
   				teamBioFlagGerard = false;
   				teamOn = false;
   				break;
   			} else {
-  				$('#team-scrollable').animate({top: '+=1820'}, {duration: 1700, easing: 'easeOutQuint'});
+  				$('#team-scrollable').animate({top: '+=1880'}, {duration: 1700, easing: 'easeOutQuint'});
   				teamOn = false;
   				break;
   			}
@@ -457,7 +600,7 @@ $('#logo-pic').click(function() {
   			break;
   		case 'news':
   			newsOn = false;
-  			$('#news-scrollable').animate({top: '+=1820'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#news-scrollable').animate({top: '+=1880'}, {duration: 1700, easing: 'easeOutQuint'});
   			break;
   		case 'contact':
   			contactOn = false;
@@ -468,110 +611,12 @@ $('#logo-pic').click(function() {
 	$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
 	$('#motto').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
   	$('#address-container').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
+  	$('#ecg-title').animate({top: '+=200'}, {duration: 1700, easing: 'easeOutQuint'});
+  	$('#heading').animate({height: '+=62'}, {duration: 1700, easing: 'easeOutQuint'});
+  	$('#logo').animate({width: '+=8%'}, {duration: 1700, easing: 'easeOutQuint'});
+  	$('#heading-text').animate({width: '-=8%'}, {duration: 1700, easing: 'easeOutQuint'});
+  	$('#pic-container').animate({width: '+=20.16%'}, {duration: 1700, easing: 'easeOutQuint'});
   	homeOn = true;
-});
-
-$('.links').click(function() {
-	var nextPos = $(this).position().left - $('#links-line').position().left;
-	$('#links-line').animate({width: $('.link-text', this).width(), left: '+=' + nextPos}, {duration: 1000, easing: 'easeOutQuint'});
-	// $('#links-line').animate({left: '+=105'}, 1000);
-});
-
-$('.links').click(function() {
-	var sourcePage;
-	var targetPage = $(this).attr('id');
-
-	if (homeOn) {
-		sourcePage = 'home';
-	} else if (teamOn) {
-		sourcePage = 'team';
-	} else if (partnersOn) {
-		sourcePage = 'partners';
-	} else if (newsOn) {
-		sourcePage = 'news';
-	} else if (contactOn) {
-		sourcePage = 'contact';
-	}
-
-	if (sourcePage.substr(0,1) == targetPage.substr(0,1)) {
-		if(teamBioFlagLarry == true){
-			$('#team-scrollable').animate({top: '-=520'}, {duration: 1000, easing: 'easeOutQuint'});
-			$('#larry-bio-div').animate({top: '-=730'}, {duration: 1400, easing: 'easeOutQuint'});
-			teamBioFlagLarry = false;
-		}
-
-		if(teamBioFlagGerard == true){
-			$('#team-scrollable').animate({top: '-=520'}, {duration: 1000, easing: 'easeOutQuint'});
-			$('#gerard-bio-div').animate({top: '-=730'}, {duration: 1400, easing: 'easeOutQuint'});
-			teamBioFlagGerard = false;
-		}
-		return;
-	}
-
-
-	switch(sourcePage) {
-		case 'home':
-			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
-			$('#motto').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
-  			$('#address-container').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
-  			homeOn = false;
-  			break;
-  		case 'team':
-  			if(teamBioFlagLarry == true){
-  				$('#team-scrollable').animate({top: '+=1300'}, {duration: 1700, easing: 'easeOutQuint'});
-				$('#larry-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
-  				teamBioFlagLarry = false;
-  				teamOn = false;
-  				break;
-  			} else if (teamBioFlagGerard == true){
-  				$('#team-scrollable').animate({top: '+=1300'}, {duration: 1700, easing: 'easeOutQuint'});
-  				$('#gerard-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
-  				teamBioFlagGerard = false;
-  				teamOn = false;
-  				break;
-  			} else {
-  				$('#team-scrollable').animate({top: '+=1820'}, {duration: 1700, easing: 'easeOutQuint'});
-  				teamOn = false;
-  				break;
-  			}
-  		case 'partners':
-  			partnersOn = false;
-  			break;
-  		case 'news':
-  			newsOn = false;
-  			$('#news-scrollable').animate({top: '+=1820'}, {duration: 1700, easing: 'easeOutQuint'});
-  			break;
-  		case 'contact':
-  			contactOn = false;
-  			break;
-  		default:
-  			break;
-	}
-
-	switch(targetPage) {
-		case 'home-link':
-			$('#motto-div').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
-			$('#motto').animate({left: '+=2000'}, {duration: 1700, easing: 'easeOutQuart'});
-  			$('#address-container').animate({bottom: '+=1000'}, {duration: 1700, easing: 'easeOutQuart'});
-  			homeOn = true;
-  			break;
-  		case 'team-link':
-  			$('#team-scrollable').animate({top: '-=1820'}, {duration: 1400, easing: 'easeOutQuart'});
-  			teamOn = true;
-  			break;
-  		case 'partners-link':
-  			partnersOn = true;
-  			break;
-  		case 'news-link':
-  			newsOn = true;
-  			$('#news-scrollable').animate({top: '-=1820'}, {duration: 1400, easing: 'easeOutQuart'});
-  			break;
-  		case 'contact-link':
-  			contactOn = true;
-  			break;
-  		default:
-  			break;
-	}
 });
 
 
@@ -585,7 +630,7 @@ $('.employee-name').click(function(){
 				break;
 			}
 			$('#team-scrollable').animate({top: '+=520'}, {duration: 1700, easing: 'easeOutQuint'});
-			$('#larry-bio-div').animate({top: '+=730'}, {duration: 1700, easing: 'easeOutQuint'});
+			$('#larry-bio-div').animate({top: '+=670'}, {duration: 1700, easing: 'easeOutQuint'});
 			teamBioFlagLarry = true;
 			break;
 		case 'gerard':
@@ -593,7 +638,7 @@ $('.employee-name').click(function(){
 				break;
 			}
 			$('#team-scrollable').animate({top: '+=520'}, {duration: 1700, easing: 'easeOutQuint'});
-			$('#gerard-bio-div').animate({top: '+=730'}, {duration: 1700, easing: 'easeOutQuint'});
+			$('#gerard-bio-div').animate({top: '+=670'}, {duration: 1700, easing: 'easeOutQuint'});
 			teamBioFlagGerard = true;
 			break;
 		default:
@@ -605,13 +650,13 @@ $('.employee-name').click(function(){
 $('#team-border').click(function(){
 	if(teamBioFlagGerard == true){
 		$('#team-scrollable').animate({top: '-=520'}, {duration: 1700, easing: 'easeOutQuint'});
-		$('#gerard-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+		$('#gerard-bio-div').animate({top: '-=670'}, {duration: 1700, easing: 'easeOutQuint'});
 		teamBioFlagGerard = false;
 	}
 
 	if(teamBioFlagLarry == true){
 		$('#team-scrollable').animate({top: '-=520'}, {duration: 1700, easing: 'easeOutQuint'});
-		$('#larry-bio-div').animate({top: '-=730'}, {duration: 1700, easing: 'easeOutQuint'});
+		$('#larry-bio-div').animate({top: '-=670'}, {duration: 1700, easing: 'easeOutQuint'});
 		teamBioFlagLarry = false;
 	}
 });
