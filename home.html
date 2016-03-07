@@ -574,7 +574,7 @@ $('#logo-pic').click(function() {
 		case 'home':
 			$('#motto-div').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
 			$('#motto').animate({left: '-=2000'}, {duration: 1700, easing: 'easeOutQuint'});
-  			$('#address-container').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint'});
+  			$('#address-container').animate({bottom: '-=1000'}, {duration: 1700, easing: 'easeOutQuint', complete});
   			homeOn = false;
   			break;
   		case 'team':

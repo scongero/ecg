@@ -66,7 +66,7 @@ body {
 
 #pic-container{
 	position: absolute;
-	height: 80%;
+	height: 75%;
 	width: 72%;
 	left: 0;
 	right: 0;
@@ -397,6 +397,7 @@ body {
 
 #news-items-div {
 	margin-top: 30px;
+	/*background-color: blue;*/
 }
 
 .one-news-div {
@@ -418,10 +419,11 @@ body {
 .news-line-div {
 	margin-right: auto;
 	margin-left: auto;
-	width: 65%;
+	width: 750px;
 	height: 1px;
 	margin-bottom: 20px;
 	margin-top: 20px;
+	/*background-color: red;*/
 }
 
 .news-line-physical {
@@ -429,6 +431,7 @@ body {
 	opacity: 0.3;
 	width: 60%;
 	height: 1px;
+	/*background-color: purple;*/
 }
 
 .news-logo-div {
