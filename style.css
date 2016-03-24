@@ -221,6 +221,9 @@ body {
 	border-color: #01361d;
 }
 
+/*
+******************************* Begin Team Definitions *******************************
+*/
 #team-scrollable {
 	position: absolute;
 	top: 2000px;
@@ -613,4 +616,129 @@ a:link, a:visited {
 */
 #gerard-bio-text-size{
 	font-size: 18px;
+}
+
+
+
+/*
+******************************* Begin Contact Us Definitions *******************************
+*/
+#partners-div {
+	background-color: white;
+	opacity: 0.96;
+	position: absolute;
+	width: 90%;
+	height: 80vh;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 1120px;
+	min-height: 580px;
+	top: 2000px;
+}
+
+#partners-border {
+	position: absolute;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #01361d;
+}
+
+#partners-pic-divider{
+	position: absolute;
+	/*background-color: purple;*/
+	height: 41%;
+	width: 100%;
+}
+
+#partners-title-divider{
+	position: absolute;
+	/*background-color: blue;*/
+	width: 100%;
+	height: 18%;
+	top: 41%;
+}
+
+#partners-text-divider{
+	position: absolute;
+	/*background-color: red;*/
+	width: 100%;
+	height: 41%;
+	top: 59%;
+
+}
+
+#bravante-pic-container{
+	position: absolute;
+	bottom: 0px;
+	height: 200px;
+	width: 750px;
+	vertical-align: bottom;
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: red;
+}
+
+#bravante-pic-container-border {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+}
+
+#partners-title {
+	display: block;
+	width: 500px;
+	height: 70px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#partners-title-text {
+	height: 70px;
+	margin-top: 1%;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: 'chamLimo';
+	font-size: 70px;
+	text-align: center;
+}
+
+#partners-line {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	bottom: 0;
+	width: 300px;
+	background-color: black;
+}
+
+#bravante-info-container {
+	height: 100%;
+	width: 85%;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;	
+	max-width: 1025px;
+	/*background-color: blue;*/
+}
+
+.bravante-text {
+	font-family: 'geoSans';
+	font-size: 30px;
+	text-align: center;
 }

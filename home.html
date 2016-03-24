@@ -343,6 +343,48 @@
 
 
 
+<!-- BEGIN PARTNERS DIV -->
+	<div id="partners-div">
+		<div id="partners-border">
+			<div id="partners-pic-divider">
+				<div id="bravante-pic-container">
+					<div id="bravante-pic-container-border">
+					<img id="bravante-pic" src='bravante.jpg' style='width:100%;height:100%'alt='[]' />
+				</div>
+			</div>
+		</div>
+
+		<div id="partners-title-divider">
+			<div id="partners-title-text">Bravante Produce</div>
+			<div class="h-line" id="partners-line"></div>
+		</div>
+
+		<div id="partners-text-divider">
+			<div class="vertical-align">
+				<div class="bravante-text">
+					<div id="bravante-info-container">
+						Bravante produce is a medium sized grower, packer, and shipper of premium California table grapes and citrus based in the great Central Valley of California. <BR> A strong commitment to taste and quality drives everything we do.<BR> Being a vertically integrated company we farm our own fields, pack, and market our own fruit enabling us to be one of the premier fruit companies in the United States.
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		</div>
+		
+		
+		
+
+		
+
+
+
+		<div id='partners-border'>
+		</div>
+	</div>
+<!-- END CONTACTUS DIV -->
+
+
 <!-- Begin Header Div -->
 	<div id="heading">
 		<div id="heading-border">
@@ -508,6 +550,7 @@ $('.links').click(function() {
   			}
   		case 'partners':
   			partnersOn = false;
+  			$('#partners-div').animate({top: '+=1880'}, {duration: 1700, easing: 'easeOutQuint'});
   			break;
   		case 'news':
   			newsOn = false;
@@ -538,6 +581,7 @@ $('.links').click(function() {
   			break;
   		case 'partners-link':
   			partnersOn = true;
+  			$('#partners-div').animate({top: '-=1880'}, {duration: 1400, easing: 'easeOutQuint'});
   			break;
   		case 'news-link':
   			newsOn = true;
@@ -545,6 +589,7 @@ $('.links').click(function() {
   			break;
   		case 'contact-link':
   			contactOn = true;
+  			
   			break;
   		default:
   			break;
@@ -597,6 +642,7 @@ $('#logo-pic').click(function() {
   			}
   		case 'partners':
   			partnersOn = false;
+  			$('#partners-div').animate({top: '+=1880'}, {duration: 1700, easing: 'easeOutQuint'});
   			break;
   		case 'news':
   			newsOn = false;
